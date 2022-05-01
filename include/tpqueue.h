@@ -1,7 +1,7 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
-include <string>
+#include <string>
 
 template<typename T>
 class TPQueue {
@@ -12,9 +12,9 @@ class TPQueue {
   };
   ITEM* first, *last;
  public:
-   TPQueue();
-   void push(T nznach);
-   T pop();
+ TPQueue();
+ void push(T nznach);
+ T pop();
 };
 
 template <typename T>
