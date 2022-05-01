@@ -1,20 +1,20 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+include <string>
 
 template<typename T>
 class TPQueue {
-   private:
+ private:
   struct ITEM {
-    T znach;
-    ITEM* next;
+     T znach;
+     ITEM* next;
   };
-ITEM* first, *last;
-  
-   public:
-  TPQueue();
-  void push(T nznach);
-  T pop();
+  ITEM* first, *last;
+ public:
+   TPQueue();
+   void push(T nznach);
+   T pop();
 };
 
 template <typename T>
