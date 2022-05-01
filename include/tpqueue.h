@@ -33,7 +33,7 @@ void TPQueue<T>::push(T nznach) {
   } else {
     ITEM* t = new ITEM;
     t -> znach = nznach;
-    if (first -> znach.prior <= t -> znach.prior) {
+    if (first -> znach.prior < t -> znach.prior) {
       t -> next = last;
       first = t;
     }
