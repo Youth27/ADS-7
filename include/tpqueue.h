@@ -12,9 +12,9 @@ class TPQueue {
   };
   ITEM* first, *last;
  public:
- TPQueue();
- void push(T nznach);
- T pop();
+  TPQueue();
+  void push(T nznach);
+  T pop();
 };
 
 template <typename T>
