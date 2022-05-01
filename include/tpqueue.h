@@ -4,16 +4,17 @@
 
 template<typename T>
 class TPQueue {
-  private:
+   private:
   struct ITEM {
-   T znach;
-   ITEM* next;
-};
+    T znach;
+    ITEM* next;
+  };
 ITEM* first, *last;
-  public:
-   TPQueue();
-   void push(T nznach);
-   T pop();
+  
+   public:
+  TPQueue();
+  void push(T nznach);
+  T pop();
 };
 
 template <typename T>
@@ -36,7 +37,6 @@ void TPQueue<T>::push(T nznach) {
       t -> next = last;
       first = t;
     }
-    
     while (last != nullptr) {
       if ((last -> znach.prior == t -> znach.prior &&
            (last -> next == nullptr ||
@@ -51,8 +51,7 @@ void TPQueue<T>::push(T nznach) {
       }
       last = last->next;
     }
-    
-    }
+  }
 }
 
 template <typename T>
@@ -61,7 +60,6 @@ T TPQueue<T>::pop() {
   first = first -> next;
   return (t -> znach);
 }
-
 struct SYM {
   char ch;
   int prior;
